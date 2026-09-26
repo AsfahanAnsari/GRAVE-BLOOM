@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://e6rnkr62kgkj"]
+
+[ext_resource type="Texture2D" uid="uid://dvefoaquxkkjy" path="res://Screenshot 2026-09-25 013120.png" id="1_a202f"]
+[ext_resource type="Script" uid="uid://cc6w6rwtmcqdl" path="res://node_3d.gd" id="1_r3fl7"]
+[ext_resource type="Script" uid="uid://dn165nvbnhkvi" path="res://texture_rect.gd" id="2_a0tk4"]
+[ext_resource type="FontFile" uid="uid://c1mlu225qr3vl" path="res://Dystopian-Canticle-Regular.otf" id="2_noarx"]
+[ext_resource type="AudioStream" uid="uid://db110kwfgt5j3" path="res://main menu.mp3" id="5_jka67"]
+
+[node name="Node3D" type="Node2D" unique_id=639296626]
+script = ExtResource("1_r3fl7")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1059725989]
+stream = ExtResource("5_jka67")
+autoplay = true
+mix_target = 1
+
+[node name="background" type="TextureRect" parent="." unique_id=1227519659]
+anchors_preset = -1
+anchor_top = 0.0050000004
+anchor_right = 1.003
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 1152.0
+offset_bottom = 650.0
+texture = ExtResource("1_a202f")
+script = ExtResource("2_a0tk4")
+metadata/_edit_lock_ = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=909673787]
+clip_contents = false
+anchors_preset = -1
+offset_left = 421.0
+offset_top = 38.0
+offset_right = 1274.0
+offset_bottom = 179.0
+offset_transform_enabled = true
+theme_override_constants/outline_size = 30
+theme_override_fonts/normal_font = ExtResource("2_noarx")
+theme_override_font_sizes/normal_font_size = 100
+theme_override_font_sizes/bold_font_size = 100
+text = "GRAVE  
+            BLOOM"
+metadata/_edit_lock_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=893854625]
+offset_left = 372.0
+offset_top = 320.0
+offset_right = 821.0
+offset_bottom = 526.0
+
+[node name="START" type="Button" parent="VBoxContainer" unique_id=496579201]
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_fonts/font = ExtResource("2_noarx")
+theme_override_font_sizes/font_size = 40
+text = "NEW GAME"
+metadata/_edit_lock_ = true
+
+[node name="setting2" type="Button" parent="VBoxContainer" unique_id=553213261]
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_fonts/font = ExtResource("2_noarx")
+theme_override_font_sizes/font_size = 40
+text = "Setting"
+
+[node name="quit" type="Button" parent="VBoxContainer" unique_id=1480700898]
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_fonts/font = ExtResource("2_noarx")
+theme_override_font_sizes/font_size = 40
+text = "Exit"
+
+[connection signal="pressed" from="VBoxContainer/START" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/setting2" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="VBoxContainer/setting2" to="." method="_on_setting_2_pressed"]
+[connection signal="pressed" from="VBoxContainer/quit" to="." method="_on_quit_pressed"]

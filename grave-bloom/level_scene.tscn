@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://uxsfonygsh1i"]
+
+[ext_resource type="Texture2D" uid="uid://bt8qfgd50cxao" path="res://WhatsApp Image 2026-09-25 at 1.25.57 AM.jpeg" id="1_4quuv"]
+[ext_resource type="AudioStream" uid="uid://b3pbpcp4f5j4c" path="res://background.mp3" id="2_187gu"]
+
+[node name="LevelScene" type="Node2D" unique_id=295264568]
+
+[node name="WhatsAppImage20260925At1_25_57Am" type="Sprite2D" parent="." unique_id=703976717]
+position = Vector2(577.5, 321.5)
+scale = Vector2(1.5611414, 1.5579711)
+texture = ExtResource("1_4quuv")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1770251692]
+stream = ExtResource("2_187gu")
+autoplay = true
