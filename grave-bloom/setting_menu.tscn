@@ -1,0 +1,154 @@
+[gd_scene format=3 uid="uid://bnjnp687dnh11"]
+
+[ext_resource type="Texture2D" uid="uid://xf8le2vdltxu" path="res://WhatsApp Image 2026-09-25 at 1.22.51 AM.jpeg" id="1_3iptn"]
+[ext_resource type="Script" uid="uid://c1be5psahmru2" path="res://setting_menu.gd" id="1_ge1dr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j8ebg"]
+bg_color = Color(0.0627451, 0.0627451, 0.09411765, 0.65882355)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.54509807, 0.22745098, 0.22745098, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gg52n"]
+bg_color = Color(0.09019608, 0.09019608, 0.1254902, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.54509807, 0.22745098, 0.22745098, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_er6a7"]
+bg_color = Color(0.16078432, 0.1254902, 0.16470589, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.54509807, 0.22745098, 0.22745098, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="setting_menu" type="Node2D" unique_id=376513907]
+script = ExtResource("1_ge1dr")
+
+[node name="background" type="TextureRect" parent="." unique_id=1375176823]
+offset_top = -1.0
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("1_3iptn")
+metadata/_edit_use_anchors_ = true
+
+[node name="setting panel" type="Panel" parent="." unique_id=704900940]
+offset_left = 47.0
+offset_top = 33.0
+offset_right = 1106.0
+offset_bottom = 602.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_j8ebg")
+metadata/_edit_lock_ = true
+
+[node name="TITLE" type="Label" parent="setting panel" unique_id=595777724]
+layout_mode = 0
+offset_left = 436.0
+offset_top = 32.0
+offset_right = 629.0
+offset_bottom = 112.0
+theme_override_colors/font_color = Color(0.9098039, 0.8627451, 0.78431374, 1)
+theme_override_font_sizes/font_size = 42
+text = "SETTING"
+
+[node name="MASTERVOLUMELABLE" type="Label" parent="setting panel" unique_id=507917300]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 140.0
+offset_right = 299.0
+offset_bottom = 174.0
+theme_override_font_sizes/font_size = 24
+text = "MASTER VOLUME"
+
+[node name="MASTERVOLUME slider" type="HSlider" parent="setting panel" unique_id=650613463]
+layout_mode = 0
+offset_left = 400.0
+offset_top = 135.0
+offset_right = 800.0
+offset_bottom = 165.0
+value = 80.0
+
+[node name="music volume label" type="Label" parent="setting panel" unique_id=1285147287]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.071
+anchor_bottom = 0.08400001
+offset_left = 100.0
+offset_top = 210.0
+offset_right = 271.811
+offset_bottom = 211.204
+theme_override_font_sizes/font_size = 24
+text = "MUSIC VOLUME"
+
+[node name="music volume SLIDER" type="HSlider" parent="setting panel" unique_id=975403538]
+layout_mode = 0
+offset_left = 400.0
+offset_top = 205.0
+offset_right = 800.0
+offset_bottom = 235.0
+value = 70.0
+
+[node name="SFX volume lable" type="Label" parent="setting panel" unique_id=1712508469]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 280.0
+offset_right = 216.0
+offset_bottom = 303.0
+theme_override_font_sizes/font_size = 24
+text = "SOUND EFFECT"
+
+[node name="SFX volume SLIDER" type="HSlider" parent="setting panel" unique_id=1122738127]
+layout_mode = 0
+offset_left = 390.0
+offset_top = 290.0
+offset_right = 790.0
+offset_bottom = 320.0
+value = 80.0
+
+[node name="Fullscreen label" type="Label" parent="setting panel" unique_id=1141088022]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 350.0
+offset_right = 218.0
+offset_bottom = 384.0
+theme_override_font_sizes/font_size = 24
+text = "Fullscreen"
+
+[node name="Fullscreentoggle" type="CheckBox" parent="setting panel" unique_id=648598284]
+layout_mode = 0
+offset_left = 400.0
+offset_top = 350.0
+offset_right = 454.0
+offset_bottom = 381.0
+text = "ON"
+
+[node name="Back button" type="Button" parent="setting panel" unique_id=769600954]
+layout_mode = 0
+offset_left = 470.0
+offset_top = 452.0
+offset_right = 630.0
+offset_bottom = 502.0
+theme_override_colors/font_color = Color(0.9098039, 0.8627451, 0.78431374, 1)
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_gg52n")
+theme_override_styles/hover = SubResource("StyleBoxFlat_er6a7")
+text = "BACK"
+
+[connection signal="toggled" from="setting panel/Fullscreentoggle" to="." method="_on_fullscreentoggle_toggled"]
+[connection signal="pressed" from="setting panel/Back button" to="." method="_on_back_button_pressed"]

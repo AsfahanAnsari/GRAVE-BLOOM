@@ -13,12 +13,18 @@ config_version=5
 config/name="GRAVE BLOOM"
 run/main_scene="uid://e6rnkr62kgkj"
 config/features=PackedStringArray("4.7", "Forward Plus")
+run/max_fps=60
 config/icon="res://icon.svg"
+
+[audio]
+
+buses/default_bus_layout="uid://dxdua1vqsla5y"
 
 [autoload]
 
 DialogueManager="*uid://c3rodes2l3gxb"
 PhantomCameraManager="*uid://duq6jhf6unyis"
+Global="*uid://bugubh6lxklgu"
 
 [display]
 
